@@ -86,20 +86,20 @@ gulp.task('css', function(){
 		  pseudoelements,
 		  cssnano
 		 ];
-	 }
+    }
 	
-	return gulp.src('./source/css/styles.scss')
+	return gulp.src('./source/css/style.scss')
       .pipe(plugins.plumber({ handleError: function(err) { console.log(err); this.emit('end'); } }))
       //.pipe(plugins.scssLint(confPlugins.scssLint))
       .pipe(plugins.sass())
-      .pipe(plugins.postcss(processors))
-      .pipe(gulpif(confGlobal.enableGZIP, plugins.gzip(confPlugins.gzipOptions)))
+      .pipe(gulpif(!confGlobal.isDevelop, plugins.postcss(processors)))
+      .pipe(gulpif(!confGlobal.isDevelop && confGlobal.enableGZIP, plugins.gzip(confPlugins.gzipOptions)))
       .pipe(gulp.dest('./static/css/'));
 });
 
 gulp.task('css:clean', function(){
 	console.log('Removing unused css styles...');
-	return gulp.src('./public/css/styles.css')
+	return gulp.src('./public/css/style.css')
       .pipe(gulpif(!confGlobal.isDevelop, plugins.uncss({ html: './public/**/*.html' })))
       .pipe(gulp.dest('./public/css/'));
 });

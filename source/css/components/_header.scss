@@ -1,0 +1,19 @@
+.header {
+  width: 100vw;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  
+  &__col-nav {
+    text-align: right;
+  }
+}

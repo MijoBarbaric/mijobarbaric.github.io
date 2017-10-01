@@ -1,0 +1,9 @@
+.tiles {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile {
+  width: 25%;
+  background-color: rgba(white, 0.8);
+}

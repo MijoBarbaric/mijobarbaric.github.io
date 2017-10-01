@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+
+  background-image: url('/img/jose-murillo-22951.jpg');
+  background-size: cover;
+  background-position: bottom center;
+
+  color: $color-text;
+}
+
+a {
+  color: $color-acccent;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 2px solid $color-acccent;
+  }
+}

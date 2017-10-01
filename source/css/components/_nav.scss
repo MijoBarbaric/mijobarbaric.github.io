@@ -1,0 +1,42 @@
+.nav {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  &__item {
+    margin: 0 1rem;
+    @include type-setting(0);
+    text-transform: uppercase;
+
+    a {
+      position: relative;
+      padding: 0.25rem 0;
+      color: $color-text;
+
+      transition: color $transition-default;
+      &:hover {
+        border: none;
+        color: $color-acccent;
+        transition: color $transition-default;
+      }
+
+      //Bottom line
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-acccent;
+        transition: all $transition-default;
+      }
+      &:hover:after {
+        left: 0;
+        width: 100%;
+        transition: all $transition-default;
+      }
+    }
+  }
+}
