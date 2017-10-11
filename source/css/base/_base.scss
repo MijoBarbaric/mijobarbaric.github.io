@@ -18,8 +18,17 @@ body {
 a {
   color: $color-acccent;
   text-decoration: none;
+}
+
+main a {
+  color: $color-acccent;
+  text-decoration: none;
 
   &:hover {
     border-bottom: 2px solid $color-acccent;
   }
+}
+
+svg {
+  fill: currentColor;
 }

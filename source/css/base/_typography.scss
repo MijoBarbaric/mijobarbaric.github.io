@@ -45,7 +45,7 @@ body {
 }
 
 //Vertical height rhythm grid (remove _HIDDEN suffix to display)
-.typography__grid_HIDDEN:before {
+body_HIDDEN:before {
   content: '';
   position: absolute;
   width: 100%;

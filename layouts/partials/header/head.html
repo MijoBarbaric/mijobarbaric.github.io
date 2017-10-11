@@ -1,7 +1,26 @@
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54687400-2"></script>
+    <script>
+        (function() {
+            if (window.location.hostname === "localhost") {
+                console.log("Analytics not running on local dev");
+                return;
+            } else {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-54687400-2');
+            }
+        })();
+    </script>
+
     <title>{{ .Title }}</title>
     <meta charset="UTF-8">
     <meta name="description" content="{{ .Description }}">
+
+    <link rel="preload" href="/css/style.css" as="style">
+    <!--<link rel="preload" href="/js/main.js" as="script">-->
 
     <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Droid+Sans|Roboto|Rubik|Signika" rel="stylesheet">
 

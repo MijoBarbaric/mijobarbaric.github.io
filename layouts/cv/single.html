@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{ .Title }}</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="{{ .Description }}">
-</head>
+{{ partial "header/head.html" . }}
 <body>
+{{ partial "header/header.html" . }}
 <main>
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+    <div class="container">
+        <div class="row">
+            <h1>{{ .Title }}</h1>
+
+            {{ .Content  }}
+        </div>
+    </div>
 </main>
+{{ partial "footer/footer.html" . }}
 </body>
 </html>
